@@ -1,0 +1,8 @@
+<% include partials/head.ejs %>
+<div class="mt">
+	<% for(var i = 0; i < news.length; i++){ %>
+		<%= news[i].title %>
+	<% } %>
+</div>
+
+<% include partials/footer.ejs %>

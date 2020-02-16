@@ -1,0 +1,16 @@
+<% for(var i = 0; i < news.length; i++) {%>
+	<div class="card">
+		<div class="cardH">
+			<img src="img/welcome.jpg" alt="">
+		</div>
+		<div class="cardB">
+			<div class="title">
+				<a href="/new/<%=news[i].id%>"><%=news[i].title%></a>
+			</div>
+			<div class="content">
+				<%=news[i].description%>
+			</div>
+			<a href="/new/<%=news[i].id%>" class="viewPost">Leer más</a>
+		</div>
+	</div>
+<%}%>
