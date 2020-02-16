@@ -43,6 +43,8 @@ function ColorSchemaWhite() {
 	document.querySelector('#titleCard').style.color = '#000';
 	document.querySelector('#contentCard').style.color = '#000';
 	
+	// Footer
+	document.querySelector('#footer').style.background = 'var(--blue)';
 
 }
 
