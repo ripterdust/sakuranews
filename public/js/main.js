@@ -7,7 +7,9 @@ var contentCard = document.querySelectorAll('#contentCard');
 var cardImage = document.querySelectorAll('#cardImage');
 var container = document.querySelector('.container');
 // Making localStorage object
-localStorage.setItem('theme', 'white');
+if (localStorage.theme == null) {
+	localStorage.setItem('theme', 'white');
+}
 
 function ColorSchemaDark() {
 		// Body background
@@ -69,6 +71,8 @@ function ColorSchemaWhite() {
 
 if (localStorage.theme == 'dark') {
 	ColorSchemaDark();
+}else{
+	ColorSchemaWhite();
 }
 
 openModal.addEventListener('click', () => {

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const ejs = require('ejs-mate');
+const morgan = require('morgan');
 
 // Settings
 app.set('port', process.env.PORT || 8080);
@@ -12,8 +13,7 @@ require('./lib/database.js');
 // Middlewares
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
-
-
+app.use(morgan('dev'));
 
 // Routes
 app.use('/', require('./routes/routes.js'));
