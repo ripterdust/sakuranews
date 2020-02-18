@@ -1,13 +1,13 @@
 <% for(var i = 0; i < 3; i++) {%>
 	<div class="card">
 		<div class="cardH">
-			<img src="img/welcome.jpg" id="cardImage">
+			<img src="img/welcome.jpg">
 		</div>
 		<div class="cardB">
-			<div class="title">
-				<a href="/new/<%=news[i].id%>" id="titleCard"><%=news[i].title%></a>
+			<div class="title" >
+				<a href="/new/<%=news[i].id%>" class="blackText" id="text"><%=news[i].title%></a>
 			</div>
-			<div class="content" id="contentCard">
+			<div class="content blackText" id="text">
 				<%=news[i].description%>
 			</div>
 			<a href="/new/<%=news[i].id%>" class="viewPost">Leer más</a>
