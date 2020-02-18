@@ -31,6 +31,18 @@ body {
 .bgDark{
 	background: var(--grey);
 }
+.whiteText {
+	color: white;
+}
+.whiteText:hover{
+	color: var(--blue);
+}
+.blackText {
+	color: black;
+}
+.blackText:hover{
+	color: white;
+}
 
 /*--------------------------*/
 /*          Navbar          */
@@ -256,11 +268,14 @@ nav .section .links .news:hover:before{
 	background-size: cover;
 	height: 50vh;
 	background-position: 0 0;
+	border-radius: 10px;
+	border: 2px solid transparent;
 }
 
 .container .overlay {
 	background: rgba(0,0,0,0.3);
 	height: 100%;
+	border-radius: 10px;
 }
 .container .overlay .Welcome{
 	width: 100%;

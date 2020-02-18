@@ -5,6 +5,7 @@ var newsContainer = document.querySelector('.newsContainerColor');
 var titleNew = document.querySelectorAll('#titleCard');
 var contentCard = document.querySelectorAll('#contentCard');
 var cardImage = document.querySelectorAll('#cardImage');
+var container = document.querySelector('.container');
 // Making localStorage object
 localStorage.setItem('theme', 'white');
 
@@ -20,7 +21,9 @@ function ColorSchemaDark() {
 	document.querySelector('#navLogo').style.color = '#fff';
 	document.querySelector('.start').style.color = '#fff';
 	document.querySelector('.news').style.color = '#fff';
-
+	// Welcome message
+	container.style.border = '2px solid #fff';
+	
 	// News dark mode
 	newsContainer.classList.remove('bgWhite');
 	newsContainer.classList.add('bgDark');
@@ -46,12 +49,15 @@ function ColorSchemaWhite() {
 	document.querySelector('#navLogo').style.color = '#000';
 	document.querySelector('.start').style.color = 'var(--blue)';
 	document.querySelector('.news').style.color = 'var(--blue)';
+	// Welcome message
+	container.style.border = '2px solid transparent';
 	// News ligth mode
 	newsContainer.classList.add('bgWhite');
 	newsContainer.classList.remove('bgDark');
 	for(var i = 0; i < titleNew.length; i++){
 		titleNew[i].style.color = '#000';
 		contentCard[i].style.color = '#000';
+		cardImage[i].style.border = 'none';
 	}
 	
 	// Footer
