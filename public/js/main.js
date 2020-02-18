@@ -1,27 +1,34 @@
 'use strict'
 var openModal = document.querySelector('.btnColor');
-var whiteColor = document.querySelector('.bgWhite');
-
+var whiteColor = document.querySelectorAll('.bgWhite');
+var newsContainer = document.querySelector('.newsContainerColor');
+var titleNew = document.querySelectorAll('#titleCard');
+var contentCard = document.querySelectorAll('#contentCard');
+var cardImage = document.querySelectorAll('#cardImage');
 // Making localStorage object
 localStorage.setItem('theme', 'white');
 
 function ColorSchemaDark() {
 		// Body background
 	document.body.style.background = 'var(--black)';
-
+	for (var i = 0; i < whiteColor.length; i++) {
+		whiteColor[i].classList.remove("bgWhite");
+		whiteColor[i].classList.add('bgDark');
+	}
 	// Nav
-	whiteColor.classList.remove("bgWhite");
-	whiteColor.classList.add('bgDark');
+	
 	document.querySelector('#navLogo').style.color = '#fff';
 	document.querySelector('.start').style.color = '#fff';
 	document.querySelector('.news').style.color = '#fff';
 
 	// News dark mode
-	document.querySelector('.newsContainerColor').classList.remove('bgWhite');
-	document.querySelector('.newsContainerColor').classList.add('bgDark');
-	document.querySelector('#titleCard').style.color = '#fff';
-	document.querySelector('#contentCard').style.color = '#fff';
-	document.querySelector('#cardImage').style.border = '2px solid #fff';
+	newsContainer.classList.remove('bgWhite');
+	newsContainer.classList.add('bgDark');
+	for(var i = 0; i < titleNew.length; i ++){
+		titleNew[i].style.color = '#fff';
+		contentCard[i].style.color = '#fff';
+		cardImage[i].style.border = '2px solid #fff';
+	}
 	
 	// Footer
 	document.querySelector('#footer').style.background = 'var(--grey)';
@@ -31,17 +38,21 @@ function ColorSchemaDark() {
 function ColorSchemaWhite() {
 	// Body background
 	document.body.style.background = 'var(--greyBody)';
+	for (var i = 0; i < whiteColor.length; i++) {
+		whiteColor[i].classList.add('bgWhite');
+		whiteColor[i].classList.remove("bgDark");
+	}
 	// Nav
-	whiteColor.classList.add('bgWhite');
-	whiteColor.classList.remove("bgDark");
 	document.querySelector('#navLogo').style.color = '#000';
 	document.querySelector('.start').style.color = 'var(--blue)';
 	document.querySelector('.news').style.color = 'var(--blue)';
-	// News dark mode
-	document.querySelector('.newsContainerColor').classList.add('bgWhite');
-	document.querySelector('.newsContainerColor').classList.remove('bgDark');
-	document.querySelector('#titleCard').style.color = '#000';
-	document.querySelector('#contentCard').style.color = '#000';
+	// News ligth mode
+	newsContainer.classList.add('bgWhite');
+	newsContainer.classList.remove('bgDark');
+	for(var i = 0; i < titleNew.length; i++){
+		titleNew[i].style.color = '#000';
+		contentCard[i].style.color = '#000';
+	}
 	
 	// Footer
 	document.querySelector('#footer').style.background = 'var(--blue)';
