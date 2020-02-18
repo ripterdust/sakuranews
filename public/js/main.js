@@ -3,7 +3,7 @@ var btn = document.querySelector('.btnColor');
 var bg = document.querySelectorAll('#backgroundColor');
 var text = document.querySelectorAll('#text');
 var footer = document.querySelector('#footer');
-
+// Comprobando o creando la existencia del localStorage
 if (localStorage.theme == null) {
 	localStorage.setItem('theme', 'white');
 }
@@ -46,6 +46,7 @@ btn.addEventListener('click', () => {
 		localStorage.theme = 'white';
 	}
 });
+// Haciendo comprobación de que tema se va a utilizar. 
 if (localStorage.theme == 'dark') {
 	darkMode();
 }else{
