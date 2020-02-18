@@ -7,10 +7,10 @@ var contentCard = document.querySelectorAll('#contentCard');
 var cardImage = document.querySelectorAll('#cardImage');
 var container = document.querySelector('.container');
 // Making localStorage object
-if (localStorage.theme == null) {
-	localStorage.setItem('theme', 'white');
-}
-
+// if (localStorage.theme == null) {
+ //  localStorage.setItem('theme', 'white');
+// }
+localStorage.setItem('theme', 'white');
 function ColorSchemaDark() {
 		// Body background
 	document.body.style.background = 'var(--black)';
