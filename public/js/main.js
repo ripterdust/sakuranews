@@ -2,6 +2,7 @@
 var btn = document.querySelector('.btnColor');
 var bg = document.querySelectorAll('#backgroundColor');
 var text = document.querySelectorAll('#text');
+var footer = document.querySelector('#footer');
 
 if (localStorage.theme == null) {
 	localStorage.setItem('theme', 'white');
@@ -17,6 +18,7 @@ function darkMode(){
 		text[i].classList.remove('blackText');
 		text[i].classList.add('whiteText');
 	}
+	footer.style.background = 'var(--grey)';
 }
 
 function whiteMode(){
@@ -30,6 +32,7 @@ function whiteMode(){
 		text[i].classList.add('blackText');
 		text[i].classList.remove('whiteText');
 	}
+	footer.style.background = 'var(--blue)';
 }
 
 btn.addEventListener('click', () => {
