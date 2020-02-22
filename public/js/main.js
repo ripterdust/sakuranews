@@ -53,9 +53,6 @@ if (localStorage.theme == 'dark') {
 	whiteMode();
 }
 
-
-
-
 // Making a functional seachbar
 function searchBarAction(){
 	var searchBar = document.querySelector('#searchBar').value;

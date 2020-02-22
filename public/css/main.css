@@ -485,13 +485,15 @@ nav .section .links .news:hover:before{
 	text-align: center;
 	margin-top: 1em;
 	font-size: 30px;
-	font-weight: 400;
+	font-weight: 700;
 	color: var(--blue);
+	text-transform: uppercase;
 }
 .news .content {
 	padding-top: 3em;
 	width: 80%;
 	margin: auto;
+	text-align: center;
 }
 .news .content img {
 	display: block;
@@ -570,6 +572,7 @@ nav .section .links .news:hover:before{
 	padding: 1em;
 	width: 90%;
 	margin: auto;
+	
 }
 .cardCategory .img {
 	padding: 2em;
@@ -592,6 +595,8 @@ nav .section .links .news:hover:before{
   }
 .cardCategory .cBody .title a {
    	font-size: 30px;
+   	font-weight: 700;
+	text-transform: uppercase;
    }
 .cardCategory .cBody .description {
 	margin: .6em 0 1em 0;
