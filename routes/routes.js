@@ -9,5 +9,6 @@ app.post('/new', controller.createNew);
 app.get('/new/:id', controller.getSingleNew);
 app.get('/category/:category', controller.getSingleCategory);
 app.get('/search/:category', controller.search);
+app.get('/searchbar/:search', controller.searchBar);
 
 module.exports = app;

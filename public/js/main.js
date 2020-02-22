@@ -9,7 +9,7 @@ if (localStorage.theme == null) {
 }
 
 function darkMode(){
-	document.body.style.background = 'var(--black)';
+	document.body.style.background = 'var(--black)'; 
 	for(var i = 0; i < bg.length; i++){
 		bg[i].classList.remove('bgWhite');
 		bg[i].classList.add('bgDark');
@@ -51,6 +51,16 @@ if (localStorage.theme == 'dark') {
 	darkMode();
 }else{
 	whiteMode();
+}
+
+
+
+
+// Making a functional seachbar
+function searchBarAction(){
+	var searchBar = document.querySelector('#searchBar').value;
+	console.log(searchBar);
+	window.location.href = "https://sakuranews.herokuapp.com/searchbar/" + searchBar;
 }
 
 

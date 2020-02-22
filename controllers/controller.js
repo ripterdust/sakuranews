@@ -51,6 +51,15 @@ const controller = {
 	search: async (req, res) => {
 		const news = await News.find({name: req.params.category});
 		
+	},
+	searchBar: async (req, res) => {
+		const news = await News.find({title: req.params.search});
+		console.log('Búsqueda', req.params.search);
+		res.render('category', {
+				title: 'Búsqueda ' + req.params.search,
+				news
+				}
+			);
 	}
 }
 
