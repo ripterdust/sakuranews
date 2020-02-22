@@ -369,7 +369,7 @@ nav .section .links .news:hover:before{
 .containerNews .news .card .cardB .content {
 	padding: 1em;
 }
-.containerNews .news .card .cardB .viewPost{
+.viewPost{
 	color: var(--blue);
 	display: block;
 	margin: 0 auto;
@@ -383,11 +383,11 @@ nav .section .links .news:hover:before{
 	z-index: 1;
 	overflow: hidden;
 }
-.containerNews .news .card .cardB .viewPost:hover {
+.viewPost:hover {
 	color: white;
 	
 }
-.containerNews .news .card .cardB .viewPost::after{
+.viewPost::after{
 	content: "";
 	width: 0;
 	height: 100%;
@@ -399,7 +399,7 @@ nav .section .links .news:hover:before{
 	transition: .2s;
 	
 }
-.containerNews .news .card .cardB .viewPost:hover:after{
+.viewPost:hover:after{
 	width: 100%;
 }
 /*--------------------------*/
@@ -433,7 +433,7 @@ nav .section .links .news:hover:before{
 	cursor: pointer;
 }
 .containerNews .sidebar .search:hover {
-	transform: scale(1.03);
+	transform: scale(1.02);
 }
 
 .containerNews .sidebar .categories{
@@ -468,7 +468,7 @@ nav .section .links .news:hover:before{
 	height: 100%;
 	width: 0;
 	background: var(--blue);
-	transition: .3s;
+	transition: .2s;
 	z-index: -1;
 }
 .containerNews .sidebar .categories .category:hover:before{
@@ -561,10 +561,44 @@ nav .section .links .news:hover:before{
 }
 
 /*--------------------------*/
-/*           Modal          */
+/*  news filter by category */
 /*--------------------------*/
-
-
+.cardCategory {
+	display: grid;
+	grid-template-columns: 30% auto;
+	height: auto;
+	padding: 1em;
+	width: 90%;
+	margin: auto;
+}
+.cardCategory .img {
+	padding: 2em;
+}
+.cardCategory .img img{
+	display: block;
+	width: 100%;
+	border-radius: 20px;
+	transition: .3s;
+}
+.cardCategory .img img:hover {
+ 	box-shadow: 10px 5px 10px 1px rgba(136,136,136, .2);
+ 	transform: scale(1.03);
+ }
+.cardCategory .cBody {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	padding: 2em 0 0 0;
+  }
+.cardCategory .cBody .title a {
+   	font-size: 30px;
+   }
+.cardCategory .cBody .description {
+	margin: .6em 0 1em 0;
+ }
+.cardCategory .cBody .margin {
+	margin-top: .4em;
+}
 /*--------------------------*/
 /*          Footer          */
 /*--------------------------*/

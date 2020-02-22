@@ -1,7 +1,20 @@
 <% include partials/head.ejs %>
 <div class="mt">
 	<% for(var i = 0; i < news.length; i++){ %>
-		<%= news[i].title %>
+		<div class="cardCategory" id="backgroundColor">
+			<div class="img">
+				<img src="/img/welcome.jpg" alt="">
+			</div>
+			<div class="cBody">
+				<div class="title">
+					<a href="/new/<%=news[i].id%>" id="text"><%=news[i].title%></a>
+				</div>
+				<div class="description" id="text">
+					<%= news[i].description %>
+				</div>
+				<a href="/new/<%=news[i].id%>" class="viewPost margin">Leer más</a>
+			</div>
+		</div>
 	<% } %>
 </div>
 
