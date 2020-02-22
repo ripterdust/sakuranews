@@ -3,7 +3,7 @@
 	<i class="fas fa-search"></i>
 </div>
 <div class="categories">
-	<% for(var i = 0; i < categories.length; i++) {%>
-		<a href="/category/<%=categories[i].name%>" class="category"><%=categories[i].name%></a>
+	<% for(var i = 0; i < news.length; i++) {%>
+		<a href="/category/<%=news[i].category%>" class="category"><%=news[i].category%></a>
 	<%}%>
 </div>
