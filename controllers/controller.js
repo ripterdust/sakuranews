@@ -1,25 +1,20 @@
 const News =  require('../model/model.js');
 const Comment =  require('../model/comments.Model.js');
-const Category = require('../model/categories.model.js');
 const controller = {
 	mainPage: async (req, res) => {
 		console.log('Get main page');
 		const news = await News.find().sort({_id: -1});
-		const categories = await Category.find().sort({ _id:-1 })
 		res.render('index', {
 			title: 'Inicio - Sakura',
-			news,
-			categories
+			news
 		});
 	},
 	listPage: async(req, res) => {
 		console.log('Get news List');
 		const news = await News.find().sort({_id: -1});
-		const categories = await Category.find();
 		res.render('list', {
 			title: 'Noticias - Sakura',
-			news,
-			categories
+			news
 		});
 	},
 	userPage: (req, res) => {
@@ -38,11 +33,9 @@ const controller = {
 	}, 
 	getSingleNew: async (req, res) => {
 		const news = await News.findById(req.params.id);
-		const categories = await Category.find();
 		const comments = await Comment.find();
 		res.render('new', {
 			news,
-			categories,
 			title: news.title,
 			comments
 		});
