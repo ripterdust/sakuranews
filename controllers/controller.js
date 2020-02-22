@@ -29,7 +29,7 @@ const controller = {
 	createNew: async(req, res) => {
 		const news = new News(req.body);
 		await news.save();
-		res.redirect('/')
+		res.redirect('/');
 	}, 
 	getSingleNew: async (req, res) => {
 		const news = await News.findById(req.params.id);
